@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental State Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1f1b24, #3e424b);
+            color: #00fff0;
+            font-family: 'Orbitron', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            text-transform: uppercase;
+            color: #ff0080;
+            letter-spacing: 0.1em;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+            width: 90%;
+        }
+
+        .day {
+            width: 80px;
+            height: 80px;
+            background-color: #282c34;
+            color: #00fff0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            font-size: 1.5rem;
+            transition: 0.3s;
+        }
+
+        .day:hover {
+            transform: scale(1.1);
+            background-color: #ff0080;
+        }
+
+        .quiz-container {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            width: 90%;
+            text-align: center;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .quiz-question {
+            margin-bottom: 20px;
+        }
+
+        .option {
+            background-color: #282c34;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            margin: 10px 0;
+            width: 100%;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .option:hover {
+            background-color: #ff0080;
+            color: #fff;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #00fff0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mental State Tracker</h1>
+
+    <h2>Today's MCQ</h2>
+    <div class="quiz-container">
+        <div class="quiz-question">How was your mood today?</div>
+        <button class="option">😄 Happy</button>
+        <button class="option">😐 Neutral</button>
+        <button class="option">😔 Sad</button>
+    </div>
+
+    <h2>Your Weekly Mood Calendar</h2>
+    <div class="calendar">
+        <div class="day">😄</div>
+        <div class="day">😐</div>
+        <div class="day">😔</div>
+        <div class="day">😄</div>
+        <div class="day">😔</div>
+        <div class="day">😐</div>
+        <div class="day">😄</div>
+    </div>
+
+    <footer>
+        &copy; 2024 Mental State Tracker | Designed with 💻 in a Cyberpunk World
+    </footer>
+
+</body>
+</html>
